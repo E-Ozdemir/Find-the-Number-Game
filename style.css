@@ -1,45 +1,71 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-image: linear-gradient(
-        rgb(202, 206, 7),rgb(180,180,172)
-    );
+body {
+  background-image: linear-gradient(rgb(202, 206, 7), rgb(180, 180, 172));
 }
-.container{
-    margin-top: 10rem;
+.container {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 900px;
+  /* border: 1px solid black; */
+}
+h2 {
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+h5 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+div div {
+  margin-bottom: 3rem;
+}
+img {
+  margin-bottom: 2rem;
+}
+input {
+  border-radius: 0.3rem;
+  height: 2rem;
+  border: none;
+}
+button {
+  background-color: rgb(223, 110, 17);
+  height: 2rem;
+  width: 4rem;
+  border: none;
+  color: white;
+  border-radius: 0.3rem;
+}
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 25px;
+    
+  }
+  .box__input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 900px;
-    /* border: 1px solid black; */
+  }
+  #guess{
+      margin-bottom: 2rem;
+  }
+
 }
-h2{
-    margin-bottom: 5rem;
-    font-size: 2rem;
+@media only screen and (min-width: 600px) {
+  h2 {
+    font-size: 50px;
+  }
 }
-h5{
-    margin-bottom:1rem ;
-    font-size: 1.5rem;
-}
-div div{
-    margin-bottom: 3rem;
-}
-img{
-    margin-bottom: 2rem;
-}
-input{
-    border-radius: .3rem;
-    height:2rem;
-    border: none;
-}
-button{
-    background-color: rgb(223, 110, 17);
-    height:2rem;
-    width: 4rem;
-    border: none;
-    color: white;
-    border-radius: .3rem;
+
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size:40px;
+  }
 }
