@@ -18,11 +18,12 @@
     <div class="container">
       <h2 class="header_top">Guess The Number (1 - 100)</h2>
       <div class="box__input">
-        <input type="number" id="guess" style="text-align: center"/>
+        <input type="number" id="guess" style="text-align: center" />
         <button type="button" onclick="checkFunction()" id="check_button">
           Check
         </button>
       </div>
+      <p id="result"></p>
       <img src="./assets/magic_hat_PNG59.png" alt="" width="20%" />
       <h5 class="header__bottom">Write the number.</h5>
       <p>Number of attempts: <span id="span_counter">0</span></p>
@@ -31,6 +32,7 @@
     <script>
       const randomNumber = Math.floor(Math.random() * 100 + 1);
       // console.log(randomNumber);
+      const guessResult = document.getElementById("result");
 
       var count = 0;
 
@@ -43,11 +45,17 @@
         document.querySelector("#span_counter").innerHTML = count;
 
         if (guessNumber < randomNumber) {
-          alert("Try higher");
+          // alert("Try higher");
+          guessResult.textContent = "Try Higher...";
+          guessResult.style.color = "red";
         } else if (guessNumber > randomNumber) {
-          alert("Try Lower");
+          // alert("Try Lower");
+          guessResult.textContent = "Try Lower...";
+          guessResult.style.color = "red";
         } else {
-          alert("Congrat!");
+          // alert("Congrat!");
+          guessResult.textContent = "Congrat!!!";
+          guessResult.style.color = "green";
           document.querySelector("#span_counter").textContent = "0";
         }
       }
