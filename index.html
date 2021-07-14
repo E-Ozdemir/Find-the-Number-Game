@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess The Number</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
-
-
-
 
   <body>
     <div class="container">
       <h2 class="header_top">Guess The Number (1 - 100)</h2>
       <div class="box__input">
-        <input type="number" id="guess" />
-        <button type="button" onclick="checkFunction()" id="check_button">Check</button>
+        <input type="number" id="guess" style="text-align: center"/>
+        <button type="button" onclick="checkFunction()" id="check_button">
+          Check
+        </button>
       </div>
       <img src="./assets/magic_hat_PNG59.png" alt="" width="20%" />
       <h5 class="header__bottom">Write the number.</h5>
       <p>Number of attempts: <span id="span_counter">0</span></p>
     </div>
 
-    <script>   
+    <script>
       const randomNumber = Math.floor(Math.random() * 100 + 1);
-      console.log(randomNumber);
+      // console.log(randomNumber);
 
       var count = 0;
 
@@ -42,10 +47,9 @@
         } else if (guessNumber > randomNumber) {
           alert("Try Lower");
         } else {
-            alert("Congrat!");
-            document.querySelector("#span_counter").textContent = "0";
+          alert("Congrat!");
+          document.querySelector("#span_counter").textContent = "0";
         }
-        
       }
     </script>
   </body>

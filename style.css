@@ -5,6 +5,7 @@
 }
 body {
   background-image: linear-gradient(rgb(202, 206, 7), rgb(180, 180, 172));
+  font-family: 'Ubuntu', sans-serif;
 }
 .container {
   margin-top: 10rem;
